@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'map',
         loadChildren: () => import('@modules/map/map.module').then((m) => m.MapModule),
       },
+      {
+        path: 'login',
+        loadChildren: () => import('@modules/login/login.module').then((m) => m.LoginModule),
+      }
     ],
   },
 ];
@@ -28,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
